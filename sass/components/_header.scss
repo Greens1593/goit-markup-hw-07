@@ -1,0 +1,105 @@
+.header {
+    
+    border-bottom: $header-border-bottom;
+
+    &__container{
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__navbar{
+        display: flex;
+        align-items: center;
+    }
+
+    // Logo
+
+    &__logo{
+        @include logo();
+    }
+    &__logo--blue{
+        @include logo-start()
+    }
+
+    // Nav-links
+
+    &__nav-list{
+        @extend %list;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        min-width: 281px;
+
+        margin-left: 93px;
+        padding-left: 0;
+
+            
+        color: $main-black;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+    }
+
+    &__nav-item:not(:last-child){
+        margin-right: 50px;
+    }
+
+    &__nav-link{
+        @extend %link;
+        display: inline-block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        
+        transition-property: color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
+
+        &:hover, &:focus{
+            color: $main-blue;
+        }
+    }
+
+    // Contacts
+
+    &__contacts{
+        display: flex;
+        color: $main-grey;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14px;
+        letter-spacing: 0.02em;
+    }
+
+    &__contact{
+        @extend %link;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        
+        transition-property: color;
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
+
+        &:hover, &:focus{
+            color: $main-blue;
+        }
+
+        &:hover > .header__icon,
+        &:focus > .header__icon {
+            fill: $main-blue;
+        }
+
+
+        &:not(:last-child){
+            margin-right: 50px;
+        }
+    }
+
+    &__icon{
+        @include icon(16px, 16px, $main-grey)
+    }
+}
