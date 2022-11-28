@@ -1,12 +1,11 @@
-.backdrop.is-hidden {
-    .modal {
+.backdrop.is-hidden > .modal {
         transform: translate(-50%, -50%) scale(1.5);
         opacity: 0;
+        pointer-events: none;
         transition-property: opacity, transform;
-        transition-duration: var(--transition-duration);
-        transition-timing-function: var(--transition-timing-function);
+        transition-duration: $transition-duration;
+        transition-timing-function: $transition-timing-function;
     }
-}
 
 .modal {
     position: absolute;
@@ -15,14 +14,15 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
+    padding: 40px;
+
     width: 528px;
-    height: 581px;
 
     background-color: #FFFFFF;
 
     transition-property: transform, opacity;
-    transition-duration: var(--transition-duration);
-    transition-timing-function: var(--transition-timing-function);
+    transition-duration: $transition-duration;
+    transition-timing-function: $transition-timing-function;
 
     &__close-window{
         position: absolute;
