@@ -99,7 +99,7 @@
         appearance: none;
 
         &:checked~.callback-form__custom-checkbox {
-            border-color: $main-white;
+            border: none;
             background-color: $main-blue;
         }
     }
@@ -113,7 +113,7 @@
         fill: $main-white;
         border-radius: 2px;
     
-        transition-property: background-color, border-color;
+        transition-property: background-color, border;
         transition-duration: $transition-duration;
         transition-timing-function: $transition-timing-function;
     }

@@ -1,4 +1,4 @@
-@mixin card-set ($width, $gap:0, $justify-content:space-between) {
+@mixin card-set ($width: inherit, $gap:0, $justify-content:space-between) {
     @extend %list;
     display: flex;
     flex-wrap: wrap;
